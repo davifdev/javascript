@@ -5,7 +5,7 @@ const request = (obj) => {
 
   xhr.addEventListener("load", () => {
     if (xhr.status >= 200 && xhr.status < 300) {
-      obj.sucess(xhr.responseText);
+      obj.success(xhr.responseText);
     } else {
       obj.error(xhr.statusText);
     }
@@ -18,18 +18,18 @@ document.addEventListener("click", (event) => {
 
   if (tag === "a") {
     event.preventDefault();
-    carregaPagina(element);
+    loadPage(element);
   }
 });
 
-function carregaPagina(element) {
+function loadPage(element) {
   const href = element.getAttribute("href");
 
   const objConfig = {
     method: "GET",
     url: href,
-    sucess(response) {
-      carregaResultado(response);
+    success(responseText) {
+      loadResult(responseText);
     },
     error(errorText) {
       console.log(errorText);
@@ -39,7 +39,7 @@ function carregaPagina(element) {
   request(objConfig);
 }
 
-function carregaResultado(response) {
-  const resultado = document.querySelector(".resultado");
-  resultado.innerHTML = response;
+function loadResult(responseText) {
+  const result = document.querySelector(".resultado");
+  result.innerHTML = responseText;
 }
