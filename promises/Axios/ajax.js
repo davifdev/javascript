@@ -1,27 +1,26 @@
-axios.get("pessoas.json")
-  .then((response) => showPersons(response.data));
+axios.get("pessoas.json").then((response) => showPerson(response.data));
 
-function showPersons(data) {
+function showPerson(data) {
   const table = document.createElement("table");
-  
-  data.forEach((pessoa) => {
+
+  data.forEach((person) => {
     const tr = document.createElement("tr");
 
     let td = document.createElement("td");
-    td.innerHTML = pessoa.nome;
+    td.innerHTML = person.nome;
+    tr.appendChild(td);
+
+    td = document.createElement("td")
+    td.innerHTML = person.idade;
     tr.appendChild(td);
 
     td = document.createElement("td");
-    td.innerHTML = pessoa.idade;
+    td.innerHTML = person.salario;
     tr.appendChild(td);
-
-    td = document.createElement("td");
-    td.innerHTML = pessoa.salario;
-    tr.appendChild(td);
-
+    
     table.appendChild(tr);
   });
 
-  const resultado = document.querySelector(".resultado");
-  resultado.appendChild(table);
+  const result = document.querySelector(".resultado");
+  result.appendChild(table);
 }

@@ -4,22 +4,20 @@ document.addEventListener("click", (event) => {
 
   if (tag === "a") {
     event.preventDefault();
-    carregaPagina(element);
+    loadPage(element);
   }
 });
 
-async function carregaPagina(element) {
+function loadPage(element) {
   const href = element.getAttribute("href");
-  try {
-    const response = await fetch(href);
-    const html = await response.text();
-    carregaResultado(html);
-  } catch (err) {
-    console.error(err);
-  }
+
+  fetch(href)
+    .then((response) => response.text())
+    .then((response) => loadResult(response))
+    .catch((err) => console.log(err));
 }
 
-function carregaResultado(response) {
-  const resultado = document.querySelector(".resultado");
-  resultado.innerHTML = response;
+function loadResult(response) {
+  const result = document.querySelector(".resultado");
+  result.innerHTML = response;
 }
