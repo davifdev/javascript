@@ -1,5 +1,6 @@
 // Tipos de dados primitivos
 // string, number, boolean, undefined, null
+// Existem dois tipos de dados em javascript tipos de dados primitivos e tipos de dados derivados (Objetos, funções, Arrays, RegExp)
 
 const personName = "Davi";
 const personAge = 24;
