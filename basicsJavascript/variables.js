@@ -1,4 +1,4 @@
-// As variáveis são espaços na mémoria onde podemos armazenar informações e reutiliza-las
+// As variáveis são espaços na mémoria onde podemos armazenar informações e reutilizá-las
 // As variáveis armazenam dados que podem ser definidos, atualizados e recuperados sempre que necessário. Os valores atribuidos a uma variável têm um tipo;
 
 // Nós podemos declarar uma variável e só depois inicializa-lá
