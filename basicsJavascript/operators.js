@@ -8,7 +8,7 @@
 // Resto da divisão / Módulo = %
 // Potenciação = **
 
-// Precedência dos operadoresa aritiméticos
+// Precedência dos operadores aritiméticos
 // (), **, / * %, + -
 
 const num1 = 5;

@@ -9,3 +9,4 @@ console.log(name);
   var name = "Luiz";
   console.log(name);
 }
+
