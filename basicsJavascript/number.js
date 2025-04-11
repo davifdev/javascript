@@ -1,22 +1,20 @@
 const num1 = 50;
 
-// Converte um número para uma string
+// Converter um número para string
 console.log(typeof num1.toString());
 
-// Converte para um número binário
+// Converte um número para binário
 console.log(num1.toString(2));
 
-// Fixa duas casas decimais
-console.log("R$",num1.toFixed(2));
-
-const num2 = 10.5;
+// Fixar casas decimais
+console.log(num1.toFixed(2));
 
 // Verifica se um número é inteiro
-console.log(Number.isInteger(num2));
+console.log(Number.isInteger(num1));
 
-const sum = 10 + undefined;
+// Verifica se um número é NaN
 
-// Verifica se é NaN
-console.log(Number.isNaN(sum));
+const sum = 10 * undefined;
+console.log(Number.isNaN());
 
 // IEE 754-2008 é o padrão que o javascript utiliza para realizar contas e ele possui uma certa imprecisão

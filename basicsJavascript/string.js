@@ -8,28 +8,25 @@ const age = 24;
 console.log(userName.charAt(2));
 
 // concat()
-console.log(userName.concat(24));
+console.log(userName.concat(age));
 
 // indexOf()
 console.log(userName.indexOf("a"));
 
-// lasIndexOf()
+// lastIndexOf()
 console.log(userName.lastIndexOf("a"));
 
 // replace()
-console.log(userName.replace(/\D+/g, ""));
+console.log(userName.replace("a", "u"));
 
 // slice()
-console.log(userName.slice(0, -1));
+console.log(userName.slice(0, -2));
 
 // split()
-console.log(userName.split(" "))
-
-// toLowerCase()
-console.log(userName.toLowerCase());
+console.log(userName.split(" "));
 
 // toUpperCase()
 console.log(userName.toUpperCase());
 
-// endsWith()
-console.log(userName.endsWith("s"));
+// toLowerCase()
+console.log(userName.toLowerCase());
