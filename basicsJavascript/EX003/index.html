@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css">
+    <title>Exercício 03</title>
+  </head>
+  <body>
+    <h1>Formulário</h1>
+    <form class="form">
+      <label>
+        <span>Nome:</span>
+        <input
+          type="text"
+          class="nome"
+          placeholder="Digite seu nome"
+          required
+        />
+      </label>
+
+      <label>
+        <span>Sobrenome:</span>
+        <input
+          type="text"
+          class="sobrenome"
+          placeholder="Digite seu sobrenome"
+          required
+        />
+      </label>
+
+      <label>
+        <span>Peso:</span>
+        <input
+          type="text"
+          class="peso"
+          placeholder="Digite seu peso"
+          required
+        />
+      </label>
+
+      <label>
+        <span>Altura:</span>
+        <input
+          type="text"
+          class="altura"
+          placeholder="Digie sua altura"
+          required
+        />
+      </label>
+
+      <button type="submit" class="btnSubmit">Enviar</button>
+    </form>
+
+    <div class="resultado">
+      <p class="nome-resultado">Seu nome: </p>
+      <p class="sobrenome-resultado">Seu sobrenome: </p>
+      <p class="peso-resultado">Seu peso:</p>
+      <p class="altura-resultado">Sua altura:</p>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
