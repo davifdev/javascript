@@ -1,3 +1,5 @@
+// Precissamos de operadores quando realizamos qualquer operação em uma linguagem de progamação
+
 // Operadores em Javascript
 
 // Operadores Aritméticos
