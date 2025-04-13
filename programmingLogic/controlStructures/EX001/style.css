@@ -1,0 +1,25 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background-color: #1f1f1f;
+  color: #bbb;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.resultado {
+  width: 100%;
+  max-width: 800px;
+  border: 2px solid #bbb;
+  border-radius: 5px;
+  padding: 1.5rem;
+  font-size: 3rem;
+  text-align: center;
+}
