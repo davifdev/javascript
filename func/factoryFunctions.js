@@ -4,26 +4,27 @@ function createPerson(name, lastName, weight, height) {
     lastName,
     weight,
     height,
-
-    get imc() {
-      const imcResult = weight / height ** 2;
-      return imcResult.toFixed(2);
+    calcIMC() {
+      const imc = this.weight / this.height ** 2
+      return imc.toFixed(2);
     },
 
     get nameComplete() {
-      return `${this.name} ${this.lastName}`;
+      console.log(this.name, this.lastName);
     },
-
+    
     set nameComplete(value) {
       value = value.split(" ");
-      this.name = value.shift();
-      this.lastName = value.join(" ");
+      const name = value.shift();
+      const lastName = value.join(" ");
+      console.log(name, lastName);
     }
-  };
+  }
 }
 
-const person = createPerson("Davi", "Fernandes", 90, 1.8);
-console.log(person.imc);
-person.nameComplete = "Roberto Lira Pinto";
+const person = createPerson("Davi", "Fernandes", 90, 1.80);
+console.log(person.calcIMC());
+person.nameComplete = "Robson Alves Costa";
+
 
 

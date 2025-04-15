@@ -1,14 +1,14 @@
 // Immediately Invoked Function Expression
 ((name, lastName) => {
-
+ 
   function createName() {
     return name + " " + lastName;
   }
 
-  function sayName() {
+  function showName() {
     console.log(createName());
   }
 
-  sayName();
-  
+  showName();
+
 })("Davi", "Fernandes");
