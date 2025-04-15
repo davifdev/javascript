@@ -12,7 +12,7 @@ const person1 = createPerson("Davi", "Fernandes", 24);
 console.log(person1);
 
 
-// Higher orde functions é uma função que recebe uma outra como argumento, ou uma função que retorna outra função
+// Higher order functions é uma função que recebe uma outra como argumento, ou uma função que retorna outra função
 function speakPhrase(phrase) {
   return function(rest) {
     return phrase + " " + rest;

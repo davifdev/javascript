@@ -1,13 +1,23 @@
-const name = "Davi";
+function fora() {
+  const x = 10;
+
+  return function dentro() {
+    console.log(x);
+  }
+}
+
+const fn = fora();
+fn();
+
 
 function sayName() {
-  const name = "Robson";
+  const name = "Davi";
   console.log(name);
 }
 
-function useSayName() {
-  const name = "Pedro";
+function showName() {
+  const name = "Lúcio";
   sayName();
 }
 
-useSayName();
+showName();
