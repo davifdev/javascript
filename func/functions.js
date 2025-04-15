@@ -1,19 +1,24 @@
-// Declaration function
-greeting1();
+// Maneiras de declarar funções em javascript
 
-function greeting1() {
-  console.log("Hello World 1");
+// declaration function
+function sayName() {
+  const name = "Davi";
+  console.log(name);
 }
 
-// Function expression
-const greeting2 = function () {
-  console.log("Hello World 2");
+sayName();
+
+// function expressions
+const sayAge = function () {
+  const age = 24;
+  console.log(age);
 };
 
-greeting2();
+sayAge();
 
-// Arrows functions
-const greeting3 = () => console.log("Hello World 3");
+// arrow function
+const sayHello = () => console.log("Hello Word!");
 
-greeting3();
+sayHello();
 
+// Funções em javascript são first-class-object uma função pode ser tratada como um dado.
