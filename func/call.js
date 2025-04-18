@@ -5,14 +5,13 @@ const obj = {
   },
 };
 
-console.log(obj);
 obj.showThis();
 
 const obj2 = {
   example: "example2",
 };
 
-obj.showThis.call(obj2);
+obj.showThis.call(obj2)
 
 function gretting(check) {
   console.log(`Olá, ${this.name} Bem-vindo(a) ao ${this.local} ${check}`);
@@ -30,6 +29,9 @@ const otherPerson = {
 
 gretting.call(person, "Aprovado");
 gretting.apply(otherPerson, ["Reprovada"]);
+
+
+
 
 const boy = {
   name: "Davi",

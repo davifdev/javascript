@@ -1,8 +1,8 @@
 const _velocidade = Symbol("Velocidade");
 
 class Carro {
-  constructor(nome) {
-    this.nome = nome;
+  constructor(modelo) {
+    this.modelo = modelo;
     this[_velocidade] = 0;
   }
 
@@ -10,11 +10,11 @@ class Carro {
     return this[_velocidade];
   }
 
-  set velocidade(valor) {
-    if (typeof valor !== "number") return;
-    if (valor >= 100 || valor <= 0) return;
+  set velocidade(value) {
+    if (typeof value !== "number") return;
+    if (value >= 100 || value <= 0) return;
 
-    this[_velocidade] = valor;
+    this[_velocidade] = value;
   }
 
   acelerar() {
@@ -28,28 +28,32 @@ class Carro {
   }
 }
 
-const carro1 = new Carro("Honda Civic");
-carro1.acelerar();
-console.log(carro1.velocidade);
+const car1 = new Carro("Honda");
+car1.velocidade = 80;
+car1.acelerar();
+car1.acelerar();
+car1.acelerar();
+car1.acelerar();
+console.log(car1.velocidade);
 
-class Pessoa {
-  constructor(nome, sobrenome) {
-    this.nome = nome;
-    this.sobrenome = sobrenome;
-  }
+// class Pessoa {
+//   constructor(nome, sobrenome) {
+//     this.nome = nome;
+//     this.sobrenome = sobrenome;
+//   }
 
-  get nomeCompleto() {
-   return `${this.nome} ${this.sobrenome}`;
-  }
+//   get nomeCompleto() {
+//    return `${this.nome} ${this.sobrenome}`;
+//   }
 
-  set nomeCompleto(valor) {
-    valor = valor.split(" ");
-    this.nome = valor.shift();
-    this.sobrenome = valor.join(" ");
-  }
-}
+//   set nomeCompleto(valor) {
+//     valor = valor.split(" ");
+//     this.nome = valor.shift();
+//     this.sobrenome = valor.join(" ");
+//   }
+// }
 
-const pessoa1 = new Pessoa("Davi", "Fernandes");
-pessoa1.nomeCompleto = "Davi Fernandes de Lima";
-console.log(pessoa1.nome);
-console.log(pessoa1.sobrenome);
+// const pessoa1 = new Pessoa("Davi", "Fernandes");
+// pessoa1.nomeCompleto = "Davi Fernandes de Lima";
+// console.log(pessoa1.nome);
+// console.log(pessoa1.sobrenome);

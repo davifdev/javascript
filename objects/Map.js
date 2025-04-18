@@ -1,7 +1,7 @@
 const pessoas = [
-  { id: 3, nome: "Luiz" },
-  { id: 2, nome: "Maria" },
-  { id: 1, nome: "Helena" },
+  { id: 3, name: "Davi" },
+  { id: 2, name: "Robson" },
+  { id: 1, name: "Camila" },
 ];
 
 const novasPessoas = new Map();
@@ -13,7 +13,6 @@ for (let pessoa of pessoas) {
 
 console.log(novasPessoas);
 
-for (let [indentifier, {id, nome}] of novasPessoas) {
-  console.log(indentifier, id, nome);
+for (let [uid, { id, name }] of novasPessoas) {
+  console.log(uid, id, name);
 }
-

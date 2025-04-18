@@ -1,26 +1,25 @@
 function Product(name, price, storage) {
-  let infoStorage = storage;
+  let valueStorage = storage;
 
   Object.defineProperty(this, "name", {
     enumerable: true,
-    writable: true,
     configurable: false,
+    writable: false,
     value: name,
   });
 
   Object.defineProperty(this, "price", {
     enumerable: true,
-    writable: true,
     configurable: false,
+    writable: false,
     value: price,
   });
 
   Object.defineProperty(this, "storage", {
     enumerable: true,
     configurable: false,
-
     get: function () {
-      return infoStorage;
+      return valueStorage;
     },
 
     set: function (value) {
@@ -28,14 +27,14 @@ function Product(name, price, storage) {
         console.log("Bad Value!");
         return;
       }
-
-      infoStorage = value;
+      valueStorage = value;
     },
   });
 }
 
-const product1 = new Product("Camiseta", 20, 500);
-console.log(product1.name);
+const product = new Product("Caderno", 19.9, 500);
+product.storage = "600";
+console.log(product.storage);
 
 function car(brand) {
   return {

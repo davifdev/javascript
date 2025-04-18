@@ -1,35 +1,30 @@
 const falar = {
   falar() {
-    console.log(`${this.name} está falando`);
+    console.log(this.name, "está falando");
   },
 };
 
 const comer = {
   comer() {
-    console.log(`${this.name} está comendo`);
+    console.log(this.name, "está comendo");
   },
 };
 
 const dormir = {
   dormir() {
-    console.log(`${this.name} está dormindo`);
+    console.log(this.name, "está dormindo");
   },
 };
 
-const personPrototype = { ...falar, ...comer, ...dormir };
+const personPrototype = { ...falar, ...dormir, ...comer };
 
-function criaPessoa(name, lastName) {
+function person(name, lastName, age) {
   return Object.create(personPrototype, {
     name: { value: name },
     lastName: { value: lastName },
+    age: { value: age },
   });
 }
 
-const person = criaPessoa("Davi", "Fernandes");
-person.falar();
-
-const person2 = criaPessoa("Larissa", "Silva");
-person2.falar();
-
-const person3 = criaPessoa("Robson", "Pinto");
-person3.falar();
+const person1 = person("Davi", "Fernandes", 24);
+person1.falar();

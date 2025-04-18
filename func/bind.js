@@ -12,7 +12,7 @@
 // const nameBind = nameResult.bind(name);
 // console.log(nameBind());
 
-function getName(){
+function getName() {
   return this.name;
 }
 

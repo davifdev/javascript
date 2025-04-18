@@ -22,5 +22,5 @@ const months = ["Jan", "March", "April", "June"];
 months.splice(1, 0, "Fev");
 console.log(months);
 
-months.splice(4, 1, "May");
+months.splice(4, 0,"May");
 console.log(months);

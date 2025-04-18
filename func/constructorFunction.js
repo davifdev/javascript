@@ -10,3 +10,5 @@ function Person(name, lastName) {
 
 const person1 = new Person("Davi", "Fernandes");
 console.log(person1.sayName());
+
+

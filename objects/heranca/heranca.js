@@ -1,58 +1,40 @@
-function Product(name, price) {
+function Product(name, price, stock) {
   this.name = name;
   this.price = price;
+  this.stock = stock;
 }
 
-Product.prototype.increase = function (value) {
-  this.price += value;
+Product.prototype.discount = function () {
+  this.price -= 10;
 };
 
-Product.prototype.discount = function (value) {
-  this.price -= value;
+Product.prototype.increase = function () {
+  this.price += 10;
 };
 
-function Shirt(name, price, color) {
-  Product.call(this, name, price);
+function Camisa(name, price, stock, color) {
+  Product.call(this, name, price, stock);
   this.color = color;
 }
 
-Shirt.prototype = Object.create(Product.prototype);
-Shirt.prototype.constructor = Shirt;
+Camisa.prototype = Product.prototype;
+Camisa.prototype.constructor = Camisa;
 
-Shirt.prototype.discount = function (percentage) {
+const camisa = new Camisa("Polo Seven", 200, 500, "preta");
+camisa.discount();
+console.log(camisa);
+
+function Caderno(name, price, stock, folha) {
+  Product.call(this, name, price, stock);
+  this.folha = folha;
+}
+
+Caderno.prototype.discount = function (percentage) {
   this.price = this.price - this.price * (percentage / 100);
 };
 
-const shirt = new Shirt("Polo", 50, "Black");
-shirt.discount(5);
-console.log(shirt);
+Caderno.prototype.constructor = Caderno;
 
-function Mug(name, price, color, storage) {
-  Product.call(this, name, price);
-  this.color = color;
-
-  Object.defineProperty(this, "storage", {
-    enumerable: true,
-    configurable: false,
-    get: function () {
-      return storage;
-    },
-    set: function (value) {
-      if (typeof value !== "number") return;
-
-      storage = value;
-    },
-  });
-}
-
-Mug.prototype = Object.create(Product.prototype);
-Mug.prototype.constructor = Mug;
-
-Mug.prototype.increase = function (percentage) {
-  this.price = this.price + this.price * (percentage / 100);
-};
-
-const mug = new Mug("Caneca", 35, "Creme", 500);
-mug.storage = 700;
-console.log(mug);
-console.log(mug.storage)
+const caderno = new Caderno("Pianini", 30, 400, "A4");
+caderno.discount(50);
+console.log(caderno);
