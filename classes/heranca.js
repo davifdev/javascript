@@ -1,6 +1,6 @@
-class DispositivosEletronicos {
-  constructor(nome) {
-    this.nome = nome;
+class DispisitivosEletronicos {
+  constructor(name) {
+    this.name = name;
     this.ligado = false;
   }
 
@@ -16,31 +16,32 @@ class DispositivosEletronicos {
   desligar() {
     if (!this.ligado) {
       console.log("O dispositivo já está desligado!");
-      return;
     }
 
     this.ligado = false;
   }
 }
 
-class Tablet extends DispositivosEletronicos {
-  constructor(name, cor) {
+class Tablet extends DispisitivosEletronicos {
+  constructor(name, color, price) {
     super(name);
-    this.cor = cor;
+    this.color = color;
+    this.price = price;
   }
 }
 
-const tablet = new Tablet("Galaxy", "Preto");
+const tablet = new Tablet("Samsumg Pad", "Preto", 5000);
 tablet.ligar();
-console.log(tablet);
+tablet.desligar();
+console.log(tablet); 
 
-class Smartphone extends DispositivosEletronicos {
-  constructor(name, cor, modelo) {
+class Smartphone extends DispisitivosEletronicos {
+  constructor(name, color, price) {
     super(name);
-    this.cor = cor;
-    this.modelo = modelo;
+    this.color = color;
+    this.price = price;  
   }
 }
 
-const smartphone = new Smartphone("Samsung", "Prata", "S25");
-console.log(smartphone);
+const iphone = new Smartphone("Iphone 16", "Cinza espacial", 3000);
+console.log(iphone);
